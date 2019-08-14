@@ -1,0 +1,13 @@
+<!-- récupération du composant articles de data service -->
+<app-cart-article *ngFor='let a of articles' [article]='a'></app-cart-article>
+<div class="row contenu">
+    <div class="col">
+        <div class="row totals">
+            <div class="col"></div>
+            <div class="col-10 bg-dark text-right price-bar">
+                Total : {{totals.toFixed(2)}} €
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</div>

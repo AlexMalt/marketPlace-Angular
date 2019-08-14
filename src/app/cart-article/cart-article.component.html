@@ -1,0 +1,20 @@
+<div class="row" *ngIf="article.qte > 0">
+    <div class="col"></div>
+    <div class="col-10">
+        <div class="row ligne-article bg-dark">
+            <div class="col-2"><img src="{{article.img}}" width="100px" /></div>
+            <div class="col-4 float-left">{{article.nom}}</div>
+            <div class="col-1 float-right"> {{article.qte}}</div>
+            <div class="col-1 float-left">
+                <div class="plus-moins">
+                    <a class="qte_links" (click)='add_qte()'><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                    <a class="qte_links" (click)='sub_qte()'><i class="fa fa-minus-circle" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="col float-right">{{article.prix.toFixed(2)}} €</div>
+            <div class="col float-right">{{(article.prix*article.qte).toFixed(2)}} €</div>
+            <div class="col float-right" (click)="delete()"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
